@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h1>Welcome <h5>{{session.email}}</h5></h1>
+   <table>
+ <tr>
+        <th></th>
+        <th>File Dey Neechay</th>
+        <th></th>
+    </tr>
+    <tr>
+        <td>Upload Files</td>
+        <td><form id="Up" action="./uploads" method="POST" enctype="multipart/form-data" >
+            <input type = "file" name="file" accept="uploaded_files/*" multiple >
+            <input type= "submit" name="upload" value="upload" > </form></td>
+</tr>
+ 
+
+
+
+
+
+
+
+{% endblock %}
