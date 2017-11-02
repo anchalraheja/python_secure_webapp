@@ -1,20 +1,20 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-<h1>Welcome <h5>{{session.email}}</h5></h1>
-   <table>
- <tr>
-        <th></th>
-        <th>File Dey Neechay</th>
-        <th></th>
-    </tr>
-    <tr>
+<h4>Welcome <h5>{{session.email}}</h4></h1>
+<br><br><br>
+<table>
+<tr>
         <td>Upload Files</td>
-        <td><form id="Up" action="./uploads" method="POST" enctype="multipart/form-data" >
-            <input type = "file" name="file" accept="uploaded_files/*" multiple >
-            <input type= "submit" name="upload" value="upload" > </form></td>
+        <td><form id="Up" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data" >
+            <input type = "file" name="file" accept="image/*" multiple >
+            <input type= "submit" name="file" value="upload" > </form></td>
 </tr>
- 
+ </table>
+ <br><br><br>
+     <a href="/download" target="blank">
+        <button class="btn btn-default">Download</button>
+    </a>
 
 
 
